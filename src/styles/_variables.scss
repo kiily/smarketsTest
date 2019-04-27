@@ -2,23 +2,8 @@
 $green: #0CCD93;
 $white: #FFFFFF;
 $black: #000000;
+$header-black: #0D0D0D;
 $dark-grey: #161616;
 
 // FONTS
 $font-s: 0.5625rem;
-
-$colors-map: (
-    green: $green,
-    white: $white,
-    black: $black,
-    dark-grey: $dark-grey
-);
-
-$font-map: (
-    font-s: $font-s
-);
-
-$variables-map: map-merge($font-map, $colors-map);
-
-@import './functions';
-
