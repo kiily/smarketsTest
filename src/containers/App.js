@@ -1,26 +1,29 @@
 import React, { Component } from 'react';
 import logo from '../logo.svg';
+import requestor from '../utils/requestor';
 
 import './App.scss';
 
 class App extends Component {
+  
+  state = {
+    popularFootballEventData: []
+  };
 
-  componentDidMount() {
-    const eventSource = new EventSource('https://api.smarkets.com/v3/popular/event_ids/sport/football/');
-    eventSource.onmessage = (event) => {
-      // TODO: solve CORS errors for HTTP requests
-      console.log('got a message', event);
-    };
+  async componentDidMount() {
+    const popularFootballEventRes = await requestor.getPopularEventData('football');
+    const popularFootballEventData = popularFootballEventRes.map(res => res.data.events[0]);
+    this.setState({ popularFootballEventData });
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+        <header className="header">
+          <img src={logo} className="logo" alt="logo" />
         </header>
-        <div className="App-content-container">
-          
+        <div className="content-container">
+            
         </div>
       </div>
     );

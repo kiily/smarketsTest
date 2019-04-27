@@ -5,7 +5,7 @@
   background: $black;
   height: 100%;
 
-  .App-header {
+  .header {
     position: relative;
     background-color: $header-black;
     height: 3rem;
@@ -17,13 +17,13 @@
     box-shadow: 0 1px 12px 0 rgba(0,0,0,0.5);
     z-index: 10;
 
-    .App-logo {
+    .logo {
       height: 30px;
       width: 100%;
     }
   }
 
-  .App-content-container {
+  .content-container {
     height: calc(100% - 3rem);
     margin-top: 3rem;
   }

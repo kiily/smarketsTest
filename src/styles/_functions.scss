@@ -1,7 +1,0 @@
-
-@function cssvar($varName) {
-    @if map-has-key($variables-map, $varName) {
-        @return var(--#{$varName}, map-get($variables-map, $varName));
-    }
-    @return var(--#{$varName});
-}
