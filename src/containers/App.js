@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 
 class App extends Component {
 
   componentDidMount() {
     const eventSource = new EventSource('https://api.smarkets.com/v3/popular/event_ids/sport/football/');
     eventSource.onmessage = (event) => {
+      // TODO: solve CORS errors for HTTP requests
       console.log('got a message', event);
-    }
+    };
   }
 
   render() {

@@ -19,5 +19,11 @@
         "react"
     ],
     "rules": {
+        "semi": [2, "always"],
+        "space-before-function-paren": 0,
+        "padded-blocks": 0,
+        "react/jsx-uses-react": 2,
+        "react/jsx-uses-vars": 2
+        
     }
 }
