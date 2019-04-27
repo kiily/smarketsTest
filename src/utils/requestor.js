@@ -8,15 +8,23 @@ async function getPopularEventIds(sport) {
   return popularEventIds;
 }
 
-async function getEventDataById(id) {
-  const eventData = await axios.get(`${baseURL}/events/${id}/`);
-  return eventData;
+async function getEventsFromIds(idArr) {
+  const eventsRes = await axios.get(`${baseURL}/events/${idArr.join(',')}/`);
+  const events = eventsRes.data.events;
+  return events;
 }
 
 async function getPopularEventData(sport) {
-  const popularEventIds = await getPopularEventIds(sport);
-  const popularEventsData = await Promise.all(popularEventIds.map(eventId => getEventDataById(eventId)));
-  return popularEventsData;
+  const eventIds = await getPopularEventIds(sport);
+  const popularEvents = await getEventsFromIds(eventIds);
+
+  // Complete the event data by adding the parent competition data
+  const parentIds = popularEvents.map(event => event.parent_id);
+  const parentEvents = await getEventsFromIds(parentIds);
+  return popularEvents.map((event, index) => {
+    event.parent = parentEvents[index];
+    return event;
+  });
 }
 
 const requestor = {

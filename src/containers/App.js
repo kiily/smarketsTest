@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
-import EventInfo from '../components/EventInfo/EventInfo';
+import EventInfo from '../components/EventInfoList/EventInfo/EventInfo';
 
 import requestor from '../utils/requestor';
 
@@ -9,14 +9,12 @@ import './App.scss';
 class App extends Component {
   
   state = {
-    popularFootballEventData: []
+    popularFootballEvents: []
   };
 
   async componentDidMount() {
-    const popularFootballEventRes = await requestor.getPopularEventData('football');
-    const popularFootballEventData = popularFootballEventRes.map(res => res.data.events[0]);
-		console.log("TCL: App -> componentDidMount -> popularFootballEventData", popularFootballEventData)
-    this.setState({ popularFootballEventData });
+    const popularFootballEvents = await requestor.getPopularEventData('football');
+    this.setState({ popularFootballEvents });
   }
 
   render() {
