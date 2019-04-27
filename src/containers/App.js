@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import logo from '../logo.svg';
+import Header from '../components/Header/Header';
+
 import requestor from '../utils/requestor';
 
 import './App.scss';
@@ -19,11 +20,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="header">
-          <img src={logo} className="logo" alt="logo" />
-        </header>
+        <Header />
         <div className="content-container">
-            
+
         </div>
       </div>
     );
