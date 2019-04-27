@@ -1,8 +1,26 @@
+@import '../../styles/_variables.scss';
+
 .EventInfo-tile {
     position: relative;
+    background: $dark-grey;
     display: flex;
     flex-direction: column;
     min-height: 130px;
     border-radius: 2px;
     padding: 10px 15px 5px;
+
+    .info-container {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        .category-container {
+            font-size: $font-s;
+            font-weight: 600;
+            color: $white;
+            .category-text {
+                color: $green;
+                text-transform: uppercase;
+            }
+        }
+    }
 }

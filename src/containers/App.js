@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
+import EventInfo from '../components/EventInfo/EventInfo';
 
 import requestor from '../utils/requestor';
 
@@ -14,6 +15,7 @@ class App extends Component {
   async componentDidMount() {
     const popularFootballEventRes = await requestor.getPopularEventData('football');
     const popularFootballEventData = popularFootballEventRes.map(res => res.data.events[0]);
+		console.log("TCL: App -> componentDidMount -> popularFootballEventData", popularFootballEventData)
     this.setState({ popularFootballEventData });
   }
 
@@ -22,7 +24,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="content-container">
-
+            <EventInfo sport="football" competition={"Premier"} />
         </div>
       </div>
     );
