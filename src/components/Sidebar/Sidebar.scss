@@ -56,6 +56,15 @@ aside.Sidebar-right {
     }
 }
 
+@media only screen and (max-width: 1024px) {
+    nav.Sidebar-left {
+        z-index: 1;
+    }
+    aside.Sidebar-right {
+        display: none;
+    }
+}
+
 
 @keyframes slideout {
     from {
