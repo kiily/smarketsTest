@@ -5,7 +5,7 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 import './ContentHeader.scss';
 
-const contentHeader = (props) => {
+const ContentHeader = (props) => {
   const [ favoriteState, setFavoriteState ] = useState({
     favorite: false
   });
@@ -15,11 +15,17 @@ const contentHeader = (props) => {
     favoriteClass += 'favorite';
   }
 
+  const onFavoriteClick = () => {
+      setFavoriteState({
+        favorite: !favoriteState.favorite
+      });
+  }
+
   const currentSportText = `${props.currentSport.charAt(0).toUpperCase()}${props.currentSport.slice(1)}`;
   return (
     <div className="ContentHeader-content">
       <h1 className="title">{currentSportText} odds
-        <button className={favoriteClass}>
+        <button className={favoriteClass} onClick={onFavoriteClick}>
           <FontAwesomeIcon icon={faStar}/>
         </button>
       </h1>
@@ -34,8 +40,8 @@ const contentHeader = (props) => {
   );
 };
 
-contentHeader.propTypes = {
+ContentHeader.propTypes = {
   currentSport: PropTypes.string
 };
 
-export default contentHeader;
+export default ContentHeader;
