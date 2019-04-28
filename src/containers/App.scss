@@ -7,5 +7,12 @@
   .content-container {
     height: calc(100% - 3rem);
     margin-top: 3rem;
+    .main-content {
+      margin-left: 240px;
+      margin-right: 340px;
+      &.left-hidden {
+        margin-left: 0;
+      }
+    }
   }
 }

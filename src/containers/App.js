@@ -5,6 +5,7 @@ import Header from '../components/Header/Header';
 import EventInfoList from '../components/EventInfoList/EventInfoList';
 import ContentHeader from '../components/ContentHeader/ContentHeader';
 import Spinner from '../components/Spinner/Spinner';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 import requestor from '../utils/requestor';
 class App extends Component {
@@ -12,7 +13,8 @@ class App extends Component {
   state = {
     currentSport: 'football',
     popularFootballEvents: [],
-    eventsLoaded: false
+    eventsLoaded: false,
+    showLeftSidebar: false
   };
 
   async componentDidMount() {
@@ -21,13 +23,27 @@ class App extends Component {
     this.setState({ popularFootballEvents, eventsLoaded: true });
   }
 
+  onShowLeftSidebar = () => {
+    this.setState({
+      showLeftSidebar: !this.state.showLeftSidebar
+    })
+  }
+
   render() {
+    let contentClass = 'main-content ';
+    if (!this.state.showLeftSidebar) {
+      contentClass += 'left-hidden';
+    }
     return (
       <div className="App">
-        <Header />
+        <Header toggleLinks={this.onShowLeftSidebar}/>
         <div className="content-container">
-            <ContentHeader currentSport={this.state.currentSport}/>
-            {this.state.eventsLoaded ? <EventInfoList events={this.state.popularFootballEvents}/> : <Spinner/>}
+            {this.state.showLeftSidebar && <Sidebar side="left"/>}
+            <div className={contentClass}>
+              <ContentHeader currentSport={this.state.currentSport}/>
+              {this.state.eventsLoaded ? <EventInfoList events={this.state.popularFootballEvents}/> : <Spinner/>}
+            </div>
+            <Sidebar side="right"/>
         </div>
       </div>
     );
