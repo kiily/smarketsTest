@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Sidebar.scss';
 
@@ -17,7 +18,7 @@ const sidebar = (props) => {
   let content = (
     <ol className="left-menu-quick-links">
       <div className="links-title">Quick Links</div>
-      <li className="menu-item">Football</li>
+      <li className="menu-item"><Link to="/">Football</Link></li>
       <li className="menu-item">Tennis</li>
       <li className="menu-item">Horse Racing</li>
       <li className="menu-item">Politics</li>

@@ -29,8 +29,12 @@ nav.Sidebar-left {
             .menu-item {
                 padding: 1rem;
                 font-size: $font-l;
-                font-weight: 500;
                 color: $white;
+                a {
+                    font-weight: 500;
+                    color: $white;
+                    text-decoration: none;
+                }
             }
         }   
     }

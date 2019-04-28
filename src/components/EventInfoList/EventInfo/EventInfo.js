@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './EventInfo.scss';
+import { Link } from 'react-router-dom';
 
 const eventInfo = (props) => {
 
   const listClasses = `EventInfo-tile ${props.isTall ? 'tall' : ''}`;
   return (
     <li className={listClasses}>
-      <a className="link-overlay" href="/event-detail"></a>
+      <Link to="/event-detail"><div className="link-overlay"></div></Link>
       <div className="info-container">
         <div className="category-container">
           <span className="category-text">{props.sport}</span><span className="separator">&gt;</span><span className="category-text">{props.competition}</span>
