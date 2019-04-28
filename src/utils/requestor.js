@@ -14,17 +14,22 @@ async function getEventsFromIds(idArr) {
   return events;
 }
 
+async function getEventFromId(id) {
+  const eventRes = await axios.get(`${baseURL}/events/${id}/`);
+  const event = eventRes.data.events[0];
+  return event;
+
+}
+
 async function getPopularEventData(sport) {
   const eventIds = await getPopularEventIds(sport);
   const popularEvents = await getEventsFromIds(eventIds);
+  console.log("TCL: getPopularEventData -> popularEvents", popularEvents);
 
-  // Complete the event data by adding the parent competition data
-  const parentIds = popularEvents.map(event => event.parent_id);
-  const parentEvents = await getEventsFromIds(parentIds);
-  return popularEvents.map((event, index) => {
-    event.parent = parentEvents[index];
+  return Promise.all(popularEvents.map(async(event) => {
+    event.parent = await getEventFromId(event.parent_id);
     return event;
-  });
+  }));
 }
 
 const requestor = {

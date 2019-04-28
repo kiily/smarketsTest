@@ -8,6 +8,40 @@
     min-height: 130px;
     border-radius: 2px;
     padding: 10px 15px 5px;
+    isolation: isolate;
+    overflow: hidden;
+
+    &.tall::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background-image: url('../../../images/football.jpg');
+        background-size: cover;
+        transition: all 0.5s ease-in-out;
+    }
+    &.tall {
+        &:hover::before {
+            transform: scale(1.05);
+            transition: transform 0.5s ease-out;
+        }
+        min-height: 410px;
+        grid-row: span 3;
+        .info-container {
+            .info-title {
+                font-size: $font-xl;
+                margin-top: 0.5rem;
+                .teams {
+                    .team:first-child {
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
 
     .info-container {
         display: flex;
@@ -20,7 +54,21 @@
             .category-text {
                 color: $green;
                 text-transform: uppercase;
+                letter-spacing: 0.7px;
+            }
+            .separator {
+                padding: 0 5px;
             }
         }
+        .info-title {
+            display: flex;
+            height: 2.8rem;
+            margin-top: 0.25rem;
+            font-size: $font-l;
+            color: $white;
+            font-weight: bold;
+            line-height: 1.5rem;
+        }
+
     }
 }

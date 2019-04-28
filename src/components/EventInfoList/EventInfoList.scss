@@ -1,0 +1,11 @@
+@import '../../styles/_variables.scss';
+
+.EventInfoList-list-container {
+    .event-info-list {
+        display: grid;
+        grid-gap: 10px;
+        grid-auto-flow: row dense;
+        grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+        grid-auto-rows: minmax(131px, auto);
+    }
+}

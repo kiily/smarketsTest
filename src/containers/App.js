@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header/Header';
-import EventInfo from '../components/EventInfoList/EventInfo/EventInfo';
+import EventInfoList from '../components/EventInfoList/EventInfoList';
 
 import requestor from '../utils/requestor';
 
@@ -14,6 +14,7 @@ class App extends Component {
 
   async componentDidMount() {
     const popularFootballEvents = await requestor.getPopularEventData('football');
+		console.log("TCL: App -> componentDidMount -> popularFootballEvents", popularFootballEvents)
     this.setState({ popularFootballEvents });
   }
 
@@ -22,7 +23,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="content-container">
-            <EventInfo sport="football" competition={"Premier"} />
+            <EventInfoList events={this.state.popularFootballEvents}/>
         </div>
       </div>
     );
