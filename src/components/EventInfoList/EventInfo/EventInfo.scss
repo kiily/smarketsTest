@@ -24,6 +24,7 @@
         z-index: -1;
         background-image: url('../../../images/football.jpg');
         background-size: cover;
+        background-position: top;
         transition: all 0.5s ease-in-out;
     }
     &.tall {

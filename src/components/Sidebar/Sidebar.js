@@ -18,7 +18,7 @@ const sidebar = (props) => {
     <ol className="left-menu-quick-links">
       <div className="links-title">Quick Links</div>
       <li className="menu-item">Football</li>
-      <li className="menu-item">Table Tennis</li>
+      <li className="menu-item">Tennis</li>
       <li className="menu-item">Horse Racing</li>
       <li className="menu-item">Politics</li>
     </ol>
