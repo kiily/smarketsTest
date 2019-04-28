@@ -10,7 +10,7 @@ const ContentHeader = (props) => {
     favorite: false
   });
 
-  let favoriteClass = 'favorite-button ';
+  let favoriteClass = 'button-custom ';
   if (favoriteState.favorite) {
     favoriteClass += 'favorite';
   }

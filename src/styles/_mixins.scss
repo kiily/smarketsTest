@@ -1,0 +1,8 @@
+@mixin button-custom($color) {
+    background: transparent;
+    border: none;
+    color: $color;
+    outline: none;
+    margin-left: 1rem;
+    padding: 0.25rem 0;
+}
