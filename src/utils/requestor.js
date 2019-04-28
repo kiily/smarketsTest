@@ -22,7 +22,6 @@ async function getEventFromId(id) {
 async function getPopularEventData(sport) {
   const eventIds = await getPopularEventIds(sport);
   const popularEvents = await getEventsFromIds(eventIds);
-  console.log("TCL: getPopularEventData -> popularEvents", popularEvents);
 
   return Promise.all(popularEvents.map(async(event) => {
     event.parent = await getEventFromId(event.parent_id);

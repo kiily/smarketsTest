@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/**/*.js"
+    "lint": "eslint src/**/*.js",
+    "reset:modules": "rm -rf node_modules && npm i"
   },
   "eslintConfig": {
     "extends": "react-app"

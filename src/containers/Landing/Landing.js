@@ -7,7 +7,7 @@ import Header from '../../components/Header/Header';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import SportsLanding from '../SportsLanding/SportsLanding';
 
-const Landing = () => {
+const Landing = (props) => {
   let contentClass = 'main-content ';
   const [sidebarState, setSidebarState] = useState({
     showLeftSidebar: true
@@ -28,7 +28,7 @@ const Landing = () => {
       <div className="content-container">
         <Sidebar show={sidebarState.showLeftSidebar} side="left"/>
         <div className={contentClass}>
-          <Route path="/" exact component={SportsLanding}/>
+          <Route path="/" exact render={() => <SportsLanding {...props}/>}/>
         </div>
         <Sidebar side="right"/>
       </div>
