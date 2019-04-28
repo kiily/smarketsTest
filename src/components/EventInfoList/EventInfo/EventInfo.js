@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './EventInfo.scss';
 
-
 const eventInfo = (props) => {
 
   const listClasses = `EventInfo-tile ${props.isTall ? 'tall' : ''}`;
@@ -26,6 +25,9 @@ const eventInfo = (props) => {
 
           </div>}
         </div>
+        <div className="event-date">
+          Start date: {props.startTime}
+        </div>
       </div>
     </li>
   );
@@ -36,7 +38,8 @@ eventInfo.propTypes = {
   competition: PropTypes.string,
   score: PropTypes.array,
   teams: PropTypes.array,
-  isTall: PropTypes.bool
+  isTall: PropTypes.bool,
+  startTime: PropTypes.string
 };
 
 export default eventInfo;

@@ -62,12 +62,18 @@
         }
         .info-title {
             display: flex;
+            flex: 1;
             height: 2.8rem;
             margin-top: 0.25rem;
             font-size: $font-l;
             color: $white;
             font-weight: bold;
             line-height: 1.5rem;
+        }
+        .event-date {
+            color: $white;
+            font-weight: bold;
+            font-size: $font-m;
         }
 
     }
