@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 import './ContentHeader.scss';
 
 const contentHeader = (props) => {
+  const [ favoriteState, setFavoriteState ] = useState({
+    favorite: false
+  });
+
+  let favoriteClass = 'favorite-button ';
+  if (favoriteState.favorite) {
+    favoriteClass += 'favorite';
+  }
+
   const currentSportText = `${props.currentSport.charAt(0).toUpperCase()}${props.currentSport.slice(1)}`;
   return (
     <div className="ContentHeader-content">
-      <h1 className="title">{currentSportText} odds</h1>
+      <h1 className="title">{currentSportText} odds
+        <button className={favoriteClass}>
+          <FontAwesomeIcon icon={faStar}/>
+        </button>
+      </h1>
       <p className="description">
         <span>
             Smarkets betting exchange allows you to bet with the best <span>{currentSportText}</span>

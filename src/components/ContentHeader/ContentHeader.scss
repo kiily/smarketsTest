@@ -4,4 +4,20 @@
     color: $white;
     padding: 0 1.25rem;
     width: 60%;
+    .title {
+        display: flex;
+        align-items: center;
+        .favorite-button {
+            background: transparent;
+            border: none;
+            color: $grey;
+            outline: none;
+            margin-left: 1rem;
+            padding: 0.25rem 0;
+            
+            &.favorite {
+
+            }
+        }
+    }
 }

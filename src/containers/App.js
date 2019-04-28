@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
+import './App.scss';
+
 import Header from '../components/Header/Header';
 import EventInfoList from '../components/EventInfoList/EventInfoList';
 import ContentHeader from '../components/ContentHeader/ContentHeader';
 
 import requestor from '../utils/requestor';
-
-import './App.scss';
-
 class App extends Component {
   
   state = {
