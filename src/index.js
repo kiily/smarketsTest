@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
+import axios from 'axios';
+
+axios.defaults.baseURL = 'https://cors-anywhere.herokuapp.com/https://api.smarkets.com/v3';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

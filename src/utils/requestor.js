@@ -1,21 +1,19 @@
 import axios from 'axios';
 
-const baseURL = 'https://cors-anywhere.herokuapp.com/https://api.smarkets.com/v3';
-
 async function getPopularEventIds(sport) {
-  const popularEventData = await axios.get(`${baseURL}/popular/event_ids/sport/${sport}`);
-  const popularEventIds = popularEventData.data.popular_event_ids;
+  const popularEventRes = await axios.get(`/popular/event_ids/sport/${sport}`);
+  const popularEventIds = popularEventRes.data.popular_event_ids;
   return popularEventIds;
 }
 
 async function getEventsFromIds(idArr) {
-  const eventsRes = await axios.get(`${baseURL}/events/${idArr.join(',')}/`);
+  const eventsRes = await axios.get(`/events/${idArr.join(',')}/`);
   const events = eventsRes.data.events;
   return events;
 }
 
 async function getEventFromId(id) {
-  const eventRes = await axios.get(`${baseURL}/events/${id}/`);
+  const eventRes = await axios.get(`/events/${id}/`);
   const event = eventRes.data.events[0];
   return event;
 
