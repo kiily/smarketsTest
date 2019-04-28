@@ -7,6 +7,13 @@ nav.Sidebar-left {
     bottom: 0;
     left: 0;
     background-color: $sidebar-grey;
+    &.in {
+        animation: slidein 0.5s ease-in;
+    }
+    &.out {
+        transform: translateX(-240px);
+        animation: slideout 0.5s ease-out;
+    }
     .sidebar-container {
         width: 240px;
         .left-menu-quick-links {
@@ -46,5 +53,24 @@ aside.Sidebar-right {
             height: 3.125rem;
             color: $white;
         }
+    }
+}
+
+
+@keyframes slideout {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: translateX(-240px);
+    }
+}
+
+@keyframes slidein {
+    from {
+        transform: translate(-240px);
+    }
+    to {
+        transform: translateX(0);
     }
 }

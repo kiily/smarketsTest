@@ -4,7 +4,15 @@ import './Sidebar.scss';
 
 const sidebar = (props) => {
   const TagType = props.side === 'left' ? 'nav' : 'aside';
-  const rootClass = `Sidebar-${props.side}`;
+  let rootClass = `Sidebar-${props.side}`;
+
+  if (props.side === 'left') {
+    if (props.show) {
+      rootClass = `${rootClass} in`;
+    } else {
+      rootClass = `${rootClass} out`;
+    }
+  }
 
   let content = (
     <ol className="left-menu-quick-links">
@@ -20,7 +28,7 @@ const sidebar = (props) => {
       <div className="popular-events">
         <div className="right-nav-header"><span>Popular Events</span></div>
         <div className="right-nav-content">
-            {/* ADD EVENTCARDLIST HERE */}
+          {/* ADD EVENTCARDLIST HERE */}
         </div>
       </div>
     );
@@ -36,7 +44,8 @@ const sidebar = (props) => {
 };
 
 sidebar.propTypes = {
-  side: PropTypes.string
+  side: PropTypes.string,
+  show: PropTypes.bool
 };
 
 export default sidebar;
