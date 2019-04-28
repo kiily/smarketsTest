@@ -1,7 +1,8 @@
 @import '../../styles/_variables.scss';
 
 .Header {
-    position: relative;
+    position: fixed;
+    top: 0;
     background-color: $header-black;
     height: 3rem;
     width: 100%;
@@ -18,5 +19,11 @@
     .logo {
         height: 30px;
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .Header{
+        position: relative;
     }
 }
