@@ -16,10 +16,10 @@ const ContentHeader = (props) => {
   }
 
   const onFavoriteClick = () => {
-      setFavoriteState({
-        favorite: !favoriteState.favorite
-      });
-  }
+    setFavoriteState({
+      favorite: !favoriteState.favorite
+    });
+  };
 
   const currentSportText = `${props.currentSport.charAt(0).toUpperCase()}${props.currentSport.slice(1)}`;
   return (

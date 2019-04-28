@@ -10,6 +10,9 @@
     padding: 10px 15px 5px;
     isolation: isolate;
     overflow: hidden;
+    &:hover {
+        background: $dark-grey-hover;
+    }
 
     &.tall::before {
         content: ' ';
