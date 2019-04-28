@@ -18,19 +18,25 @@ nav.Sidebar-left {
         width: 240px;
         .left-menu-quick-links {
             padding: 0rem;
+            margin: 5px 0;
             .links-title {
                 font-size: $font-m;
                 color: $green;
-                padding: 5px 1rem;
+                padding: 10px 1rem;
                 font-weight: 600;
                 letter-spacing: 0.7px;
                 text-transform: uppercase;
             }
             .menu-item {
-                padding: 1rem;
+                display: flex;
                 font-size: $font-l;
                 color: $white;
                 a {
+                    &.active {
+                        background: $green-50;
+                    }
+                    padding: 1rem;
+                    width: 100%;
                     font-weight: 500;
                     color: $white;
                     text-decoration: none;
