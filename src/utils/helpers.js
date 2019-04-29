@@ -1,6 +1,6 @@
 import { format } from 'date-fns';
 
-export function createMinimalEvent(event) {
+export function createMinimalEvent(event, dateFormat = 'dd/MM/yyyy HH:mm') {
   const sport = event.type.split('_')[0];
   const parentCompetition = event.parent.name;
   const teams = event.name.split(' vs. ');
@@ -8,9 +8,9 @@ export function createMinimalEvent(event) {
   const minimalEvent = {
     id: event.id,
     sport,
-    parentCompetition,
+    competition: parentCompetition,
     teams,
-    startTime: format(startTime, 'DD/MM/YYYY HH:mm')
+    startTime: format(startTime, dateFormat)
   };
   return minimalEvent;
 }

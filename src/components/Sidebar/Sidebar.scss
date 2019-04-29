@@ -20,12 +20,10 @@ nav.Sidebar-left {
             padding: 0rem;
             margin: 5px 0;
             .links-title {
-                font-size: $font-m;
+                @include uppercase-text($font-m);
                 color: $green;
                 padding: 10px 1rem;
                 font-weight: 600;
-                letter-spacing: 0.7px;
-                text-transform: uppercase;
             }
             .menu-item {
                 display: flex;

@@ -36,7 +36,7 @@
         grid-row: span 3;
         .info-container {
             .info-title {
-                font-size: $font-xl;
+                font-size: $font-xxl;
                 margin-top: 0.5rem;
                 .teams {
                     .team:first-child {
@@ -63,9 +63,8 @@
             font-weight: 600;
             color: $white;
             .category-text {
+                @include uppercase-text();
                 color: $green;
-                text-transform: uppercase;
-                letter-spacing: 0.7px;
             }
             .separator {
                 padding: 0 5px;

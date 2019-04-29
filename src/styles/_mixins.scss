@@ -6,3 +6,9 @@
     margin-left: 1rem;
     padding: 0.25rem 0;
 }
+
+@mixin uppercase-text($font-size: $font-s) {
+    font-size: $font-size;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}

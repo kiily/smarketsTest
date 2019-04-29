@@ -4,6 +4,7 @@
     height: calc(100% - 3rem);
     margin-top: 3rem;
     .main-content {
+        display: flex;
         margin-left: 240px;
         margin-right: 340px;
         background: $black;
@@ -21,6 +22,7 @@
             margin-left: 0;
             margin-right: 0;
             transition: margin 0.5 ease-out;
+            height: 100%; 
         }
     }
 }

@@ -1,0 +1,127 @@
+// Based on https://codepen.io/anon/pen/ZZPqEo
+@import '../../styles//variables.scss';
+
+.NotFound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    *, *::after, *::before{
+        box-sizing: border-box;
+    }
+        
+    .illustration-container {
+        display: block;
+        position: relative;
+        width: 200px;
+        margin: 10% auto 0;
+        animation: shvr .2s infinite;
+        
+        &::after{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #000;
+            position: absolute;
+            top: 30px;
+            left: 25px;
+            border-radius: 50%;
+            box-shadow: 125px 0 0 #000;
+            animation: eye 2.5s infinite;
+        }
+    }
+    .eye {
+        position: relative;
+        display: inline-block;
+        background: #fff;
+        width: 75px;
+        height: 80px;
+        transform: rotate(45deg);
+        border-radius: 50%;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        border-bottom: 2px solid #fff;
+        width: 70px;
+        height: 50px;
+        left:0px;
+        bottom: -10px;
+        border-radius: 50%;
+    }
+    
+    &::before{
+        bottom: auto;
+        top: -100px;
+        transform: rotate(45deg);
+        left: 0;
+    }
+    
+    &:nth-of-type(2){
+        float: right;
+        transform: rotate(-45deg);
+        &::after{ left:5px; }
+    }
+    
+    &:nth-of-type(3){
+        display: none;
+    }
+    
+    }
+    
+    .text-body{
+    margin-top: 100px;
+    text-align: center;
+    color: #fff;
+    &::before{
+        content: '404';
+        font-size: 80px;
+        font-weight: 800;
+        display: block;
+        margin-bottom: 10px;
+    }
+    &::after{
+        content: 'Got lost? How.....?  why.....?  Ahhhh....';
+        color: $green;
+        width: 250px;
+        font-size: 30px;
+        overflow: hidden;
+        display: inline-block;
+        white-space: nowrap;
+        animation: text-show 2s infinite steps(3);
+    }
+    }
+}
+
+@keyframes eye {
+    0% ,30% , 55%, 90% , 100% {
+        transform: translate(0);
+    }
+    10%, 25%{ 
+        transform: translate(0, 20);
+    }
+    65%{ 
+        transform: translate(-20px, 0);
+    }
+    80%{ 
+        transform: translate(20px, 0);
+    }
+}
+  
+@keyframes shvr {
+    0%{ 
+        transform: translate(1px) 
+    }
+    50%{ 
+        transform: translate(0) 
+    }
+    100%{
+        transform: translate(-1px) 
+    }
+}
+  
+@keyframes text-show {
+    to{
+        text-indent: -373px;
+    }
+}

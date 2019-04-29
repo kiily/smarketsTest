@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+
+.EventDetailPage-container {
+    .breadcrumb-nav {
+        display: flex;
+        color: $white;
+        align-items: center;
+        list-style-type: none;
+        padding: 10px;
+        margin-bottom: 5px;
+        .breadcrumb {
+            @include uppercase-text();
+            display: flex;
+            align-items: center;
+            .caret-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $font-l;
+                border-radius: 2px;
+                width: 1.125rem;
+                height: 1.125rem;
+                background: $caret-grey;
+                margin: 0 0.5rem;
+            }
+        }
+    }
+    .event-header {
+        border-top: 1px solid $border-color;
+        margin: 0 10px;
+        padding: 0.5rem;
+        .teams-container {
+            .competitor {
+                color: $white;
+                font-size: $font-xl;
+            }
+        }
+        .event-info-container {
+            .event-date {
+                @include uppercase-text($font-m);
+                display: flex;
+                color: $text-grey;
+                .calendar-icon-container {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
