@@ -5,12 +5,17 @@
     margin-top: 3rem;
     .main-content {
         display: flex;
+        height: 100%;
         margin-left: 240px;
         margin-right: 340px;
         background: $black;
         transition: margin 0.5s ease-out;
         &.left-hidden {
             margin-left: 0;
+        }
+
+        main {
+            width: 100%;
         }
         
     }
