@@ -8,6 +8,7 @@ import requestor from './utils/requestor';
 
 class App extends Component {
 
+  // TODO: move this logic to the Landing container and make this component functional
   state = {
     currentSport: 'football',
     popularFootballEvents: [],
