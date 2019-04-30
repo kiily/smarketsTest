@@ -17,7 +17,6 @@ class App extends Component {
 
   async componentDidMount() {
     const popularFootballEvents = await requestor.getPopularEventData(this.state.currentSport);
-		console.log("TCL: App -> componentDidMount -> popularFootballEvents", popularFootballEvents)
     this.setState({ popularFootballEvents, eventsLoaded: true });
   }
   

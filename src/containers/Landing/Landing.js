@@ -38,7 +38,7 @@ const Landing = (props) => {
             </Switch>
           </main>
         </div>
-        <Sidebar side="right"/>
+        <Sidebar popularEvents={props.popularEvents} side="right"/>
       </div>
     </Fragment>
   );

@@ -1,9 +1,18 @@
 import axios from 'axios';
 
 async function getPopularEventIds(sport) {
-  const popularEventRes = await axios.get(`/popular/event_ids/sport/${sport}`);
+  const popularEventRes = await axios.get(`/popular/event_ids/sport/${sport}/`);
   const popularEventIds = popularEventRes.data.popular_event_ids;
   return popularEventIds;
+}
+
+/**
+ * Potentially to be used to get the event that should be classed as tall
+ */
+async function getHomeEvents() {
+  const homeEventsRes = await axios.get(`/popular/home/`);
+  const homeEvents = homeEventsRes.data;
+  console.log('TCL: getHomeEvents -> homeEvents', homeEvents);
 }
 
 async function getEventsFromIds(idArr) {
@@ -30,7 +39,8 @@ async function getPopularEventData(sport) {
 }
 
 const requestor = {
-  getPopularEventData
+  getPopularEventData,
+  getHomeEvents
 };
 
 export default requestor;

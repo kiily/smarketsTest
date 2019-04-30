@@ -81,14 +81,14 @@
         margin-bottom: 10px;
     }
     &::after{
-        content: 'Got lost? How.....?  why.....?  Ahhhh....';
+        content: 'Page under construction....';
         color: $green;
         width: 250px;
         font-size: 30px;
         overflow: hidden;
         display: inline-block;
         white-space: nowrap;
-        animation: text-show 2s infinite steps(3);
+        animation: text-show 2s infinite steps(3);  
     }
     }
 }

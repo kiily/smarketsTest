@@ -1,7 +1,9 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Sidebar.scss';
+
+import { createMinimalEvent } from '../../utils/helpers';
 
 const sidebar = (props) => {
   const TagType = props.side === 'left' ? 'nav' : 'aside';
@@ -29,7 +31,21 @@ const sidebar = (props) => {
       <div className="popular-events">
         <div className="right-nav-header"><span>Popular Events</span></div>
         <div className="right-nav-content">
-          {/* ADD EVENTCARDLIST HERE */}
+          <ul className="popular-events-list">
+            {props.popularEvents.map((event) => {
+              const minimalEvent = createMinimalEvent(event);
+              return (
+                <li key={event.id}>
+                  <Link to={`/event-detail/${minimalEvent.id}`}>
+                    <span className="event-link-content">
+                      <div className="event-name">{`${minimalEvent.teams[0]} vs. ${minimalEvent.teams[1]}`}</div>
+                      <div className="event-info">{minimalEvent.startTime}</div>
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </div>
     );
@@ -46,6 +62,7 @@ const sidebar = (props) => {
 
 sidebar.propTypes = {
   side: PropTypes.string,
+  popularEvents: PropTypes.array,
   show: PropTypes.bool
 };
 
