@@ -39,7 +39,7 @@ const sidebar = (props) => {
                   <Link to={`/event-detail/${minimalEvent.id}`}>
                     <span className="event-link-content">
                       <div className="event-name">{`${minimalEvent.teams[0]} vs. ${minimalEvent.teams[1]}`}</div>
-                      <div className="event-info">{minimalEvent.startTime}</div>
+                      <div className="event-info">{minimalEvent.timeTo}</div>
                     </span>
                   </Link>
                 </li>

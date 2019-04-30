@@ -82,9 +82,11 @@ aside.Sidebar-right {
                             background-color: $border-color;
                             border-top-color: transparent;
                         }
-
                         .event-link-content {
-
+                            .event-info {
+                                @include uppercase-text();
+                                color: $text-grey;
+                            }
                         }
                     }
                 }
