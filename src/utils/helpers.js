@@ -18,7 +18,7 @@ export function createMinimalEvent({ id, type, name, parent, start_datetime }, d
   return minimalEvent;
 }
 
-function getTimeTo(startTime) {
+export function getTimeTo(startTime) {
   const millisecondDiff = Math.abs(new Date() - startTime);
   const hoursTo = Math.ceil((millisecondDiff / 1000) / 3600);
   let timeTo = hoursTo;
