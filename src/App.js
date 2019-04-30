@@ -1,35 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import './App.scss';
 import Landing from './containers/Landing/Landing';
+import ErrorBoundary from './hoc/ErrorBoundary/ErrorBoundary';
 
-import requestor from './utils/requestor';
+const app = () => {
+  return (
+    <div className="App">
+      <BrowserRouter>
+          <Landing />
+      </BrowserRouter>
+    </div>
+  );
+};
 
-class App extends Component {
-
-  // TODO: move this logic to the Landing container and make this component functional
-  state = {
-    currentSport: 'football',
-    popularFootballEvents: [],
-    eventsLoaded: false
-  };
-
-  async componentDidMount() {
-    const popularFootballEvents = await requestor.getPopularEventData(this.state.currentSport);
-    this.setState({ popularFootballEvents, eventsLoaded: true });
-  }
-  
-
-  render() {
-    return (
-      <div className="App">
-        <BrowserRouter>
-          <Landing popularEvents={this.state.popularFootballEvents} currentSport="football" eventsLoaded={this.state.eventsLoaded}/>
-        </BrowserRouter>
-      </div>
-    );
-  }
-}
-
-export default App;
+export default app;
