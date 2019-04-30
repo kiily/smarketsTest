@@ -20,9 +20,16 @@ class Landing extends Component {
   };
 
   async componentDidMount() {
-    const popularFootballEvents = await requestor.getPopularEventData(this.state.currentSport);
-		console.log("TCL: Landing -> componentDidMount -> popularFootballEvents", popularFootballEvents)
-    this.setState({ popularEvents: popularFootballEvents, eventsLoaded: true });
+    try {
+      const popularFootballEvents = await requestor.getPopularEventData(this.state.currentSport);
+      console.log("TCL: Landing -> componentDidMount -> popularFootballEvents", popularFootballEvents)
+      this.setState({ popularEvents: popularFootballEvents, eventsLoaded: true });
+    } catch(error) {
+      // Re-render to trigger error boundary
+      this.setState({
+        error
+      });
+    }
   }
   
   onShowLeftSidebar = () => {
@@ -30,6 +37,7 @@ class Landing extends Component {
   }
 
   render() {
+    if (this.state.error) throw new Error(this.state.error);
     let contentClass = 'main-content ';
     if (!this.state.showLeftSidebar) {
       contentClass += 'left-hidden';

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './ErrorBoundary.scss';
 class ErrorBoundary extends Component {
     state = {
         error: null,
@@ -7,8 +7,6 @@ class ErrorBoundary extends Component {
     }
 
     componentDidCatch(error, info) {
-        console.log("TCL: ErrorBoundary -> componentDidCatch -> info", info)
-        console.log("TCL: ErrorBoundary -> componentDidCatch -> error", error)
         this.setState({
             error,
             info
@@ -17,11 +15,16 @@ class ErrorBoundary extends Component {
 
     render() {
         return (
-            this.state.error &&
-            <div class = "ErrorBoundary-container" >
-                <div class = "error-overlay"> </div> 
-                <div class = "error-container" > { this.state.error } </div> 
-            </div>
+            this.state.error ?
+            <div className="ErrorBoundary-container">
+                <div className="error-overlay"></div> 
+                <div className="error-container">
+                    <h1 className="error-title">Something went wrong</h1>
+                    <span className="error-message">
+                        {this.state.error.message}
+                    </span>
+                </div> 
+            </div> : this.props.children
         )
     }
 }

@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.ErrorBoundary-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .error-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $black;
+        opacity: 0.7;
+    }
+    .error-container {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: $dark-grey;
+        color: $white;
+        padding: 10px;
+        border-radius: 5px;
+        h1 {
+            margin: 0;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+        }
+    }
+}

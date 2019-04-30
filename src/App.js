@@ -9,7 +9,9 @@ const app = () => {
   return (
     <div className="App">
       <BrowserRouter>
+        <ErrorBoundary>
           <Landing />
+        </ErrorBoundary>
       </BrowserRouter>
     </div>
   );
