@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFound component should match the snapshot when rendered 1`] = `
+<div
+  className="NotFound-container"
+>
+  <div
+    className="illustration-container"
+  >
+    <div
+      className="eye"
+    />
+    <div
+      className="eye"
+    />
+    <div
+      className="text-body"
+    />
+  </div>
+</div>
+`;
