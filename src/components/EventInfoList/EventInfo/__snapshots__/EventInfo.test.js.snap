@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EventInfo component should match the snapshot when rendered with props 1`] = `
+<li
+  className="EventInfo-tile "
+>
+  <a
+    href="/event-detail/1"
+    onClick={[Function]}
+  >
+    <div
+      className="link-overlay"
+    />
+  </a>
+  <div
+    className="info-container"
+  >
+    <div
+      className="category-container"
+    >
+      <span
+        className="category-text"
+      >
+        Football
+      </span>
+      <span
+        className="separator"
+      >
+        &gt;
+      </span>
+      <span
+        className="category-text"
+      />
+    </div>
+    <div
+      className="info-title"
+    >
+      <div
+        className="teams"
+      >
+        <div
+          className="team"
+        >
+          <span
+            className="team-name"
+          >
+            Real Madrid
+          </span>
+        </div>
+        <div
+          className="team"
+        >
+          <span
+            className="team-name"
+          >
+            Barcelona
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="event-date"
+    >
+      Start date: 
+      30/01/2019 18:30
+    </div>
+  </div>
+</li>
+`;
+
+exports[`EventInfo component should should have the tall class if isTall is true 1`] = `
+<li
+  className="EventInfo-tile tall"
+>
+  <a
+    href="/event-detail/1"
+    onClick={[Function]}
+  >
+    <div
+      className="link-overlay"
+    />
+  </a>
+  <div
+    className="info-container"
+  >
+    <div
+      className="category-container"
+    >
+      <span
+        className="category-text"
+      >
+        Football
+      </span>
+      <span
+        className="separator"
+      >
+        &gt;
+      </span>
+      <span
+        className="category-text"
+      />
+    </div>
+    <div
+      className="info-title"
+    >
+      <div
+        className="teams"
+      >
+        <div
+          className="team"
+        >
+          <span
+            className="team-name"
+          >
+            Real Madrid
+          </span>
+        </div>
+        <div
+          className="team"
+        >
+          <span
+            className="team-name"
+          >
+            Barcelona
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="event-date"
+    >
+      Start date: 
+      30/01/2019 18:30
+    </div>
+  </div>
+</li>
+`;
