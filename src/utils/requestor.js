@@ -46,7 +46,6 @@ async function getPopularEventData(sport) {
 
 const requestor = {
   getPopularEventData,
-  getHomeEvents,
   getEventState,
   getEventFromId
 };
