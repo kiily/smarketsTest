@@ -22,7 +22,6 @@ class Landing extends Component {
   async componentDidMount() {
     try {
       const popularFootballEvents = await requestor.getPopularEventData(this.state.currentSport);
-      console.log("TCL: Landing -> componentDidMount -> popularFootballEvents", popularFootballEvents)
       this.setState({ popularEvents: popularFootballEvents, eventsLoaded: true });
     } catch(error) {
       // Re-render to trigger error boundary

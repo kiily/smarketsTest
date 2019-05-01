@@ -21,7 +21,6 @@ describe('Helper functions - createMinimalEvents', () => {
       anotherFakeProp: 'test',
       state: 'upcoming'
     });
-    console.log(minimalEvent);
     const defaultDateFormat = 'dd/MM/yyyy HH:mm';
     const today = format(new Date(), defaultDateFormat);
     expect(minimalEvent).toEqual({

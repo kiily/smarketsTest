@@ -9,11 +9,10 @@ async function getPopularEventIds(sport) {
 /**
  * Potentially to be used to get the event that should be classed as tall
  */
-async function getHomeEvents() {
-  const homeEventsRes = await axios.get(`/popular/home/`);
-  const homeEvents = homeEventsRes.data;
-  console.log('TCL: getHomeEvents -> homeEvents', homeEvents);
-}
+// async function getHomeEvents() {
+//   const homeEventsRes = await axios.get(`/popular/home/`);
+//   const homeEvents = homeEventsRes.data;
+// }
 
 async function getEventsFromIds(idArr) {
   const eventsRes = await axios.get(`/events/${idArr.join(',')}/`);
@@ -39,10 +38,8 @@ async function getPopularEventData(sport) {
   return Promise.all(popularEvents.map(async(event) => {
     // TODO: this makes calls really slow - is there a faster way
     const eventState = await getEventState(event.id);
-		console.log("TCL: getPopularEventData -> eventState", eventState)
     event.state = eventState.state;
     event.parent = await getEventFromId(event.parent_id);
-		console.log("TCL: getPopularEventData -> event", event)
     return event;
   }));
 }

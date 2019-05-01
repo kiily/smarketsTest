@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const eventInfo = (props) => {
   const listClasses = `EventInfo-tile ${props.isTall ? 'tall' : ''}`;
-  console.log('props', props.event.state);
   return (
     <li className={listClasses}>
       <Link to={`/event-detail/${props.event.id}`}>
