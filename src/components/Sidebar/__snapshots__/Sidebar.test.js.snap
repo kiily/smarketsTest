@@ -105,7 +105,7 @@ exports[`Sidebar component right side should match the snapshot when rendered wi
                 <div
                   className="event-info"
                 >
-                  In 14 hour(s)
+                  In 17 hour(s)
                 </div>
               </span>
             </a>
@@ -126,7 +126,7 @@ exports[`Sidebar component right side should match the snapshot when rendered wi
                 <div
                   className="event-info"
                 >
-                  In 11 hour(s)
+                  In 8 hour(s)
                 </div>
               </span>
             </a>
@@ -147,7 +147,7 @@ exports[`Sidebar component right side should match the snapshot when rendered wi
                 <div
                   className="event-info"
                 >
-                  In 14 hour(s)
+                  In 17 hour(s)
                 </div>
               </span>
             </a>
@@ -168,7 +168,7 @@ exports[`Sidebar component right side should match the snapshot when rendered wi
                 <div
                   className="event-info"
                 >
-                  In 11 hour(s)
+                  In 8 hour(s)
                 </div>
               </span>
             </a>
