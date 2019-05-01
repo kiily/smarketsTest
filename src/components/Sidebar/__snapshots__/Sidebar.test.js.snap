@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar component left side should match the snapshot when rendered with props 1`] = `
+<nav
+  className="Sidebar-left in"
+>
+  <div
+    className="sidebar-container"
+  >
+    <ol
+      className="left-menu-quick-links"
+    >
+      <div
+        className="links-title"
+      >
+        Quick Links
+      </div>
+      <li
+        className="menu-item"
+      >
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+          style={Object {}}
+        >
+          Football
+        </a>
+      </li>
+      <li
+        className="menu-item"
+      >
+        <a
+          aria-current={null}
+          href="/tennis"
+          onClick={[Function]}
+        >
+          Tennis
+        </a>
+      </li>
+      <li
+        className="menu-item"
+      >
+        <a
+          aria-current={null}
+          href="/horse"
+          onClick={[Function]}
+        >
+          Horse Racing
+        </a>
+      </li>
+      <li
+        className="menu-item"
+      >
+        <a
+          aria-current={null}
+          href="/politics"
+          onClick={[Function]}
+        >
+          Politics
+        </a>
+      </li>
+    </ol>
+  </div>
+</nav>
+`;
+
+exports[`Sidebar component right side should match the snapshot when rendered with props 1`] = `
+<aside
+  className="Sidebar-right"
+>
+  <div
+    className="sidebar-container"
+  >
+    <div
+      className="popular-events"
+    >
+      <div
+        className="right-nav-header"
+      >
+        <span>
+          Popular Events
+        </span>
+      </div>
+      <div
+        className="right-nav-content"
+      >
+        <ul
+          className="popular-events-list"
+        >
+          <li>
+            <a
+              href="/event-detail/1925896"
+              onClick={[Function]}
+            >
+              <span
+                className="event-link-content"
+              >
+                <div
+                  className="event-name"
+                >
+                  Millwall vs. Bristol City
+                </div>
+                <div
+                  className="event-info"
+                >
+                  In 14 hour(s)
+                </div>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/event-detail/1934371"
+              onClick={[Function]}
+            >
+              <span
+                className="event-link-content"
+              >
+                <div
+                  className="event-name"
+                >
+                  Swansea City vs. Derby County
+                </div>
+                <div
+                  className="event-info"
+                >
+                  In 11 hour(s)
+                </div>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/event-detail/1943310"
+              onClick={[Function]}
+            >
+              <span
+                className="event-link-content"
+              >
+                <div
+                  className="event-name"
+                >
+                  Tottenham Hotspur vs. Ajax
+                </div>
+                <div
+                  className="event-info"
+                >
+                  In 14 hour(s)
+                </div>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/event-detail/1943311"
+              onClick={[Function]}
+            >
+              <span
+                className="event-link-content"
+              >
+                <div
+                  className="event-name"
+                >
+                  Barcelona vs. Liverpool
+                </div>
+                <div
+                  className="event-info"
+                >
+                  In 11 hour(s)
+                </div>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/event-detail/1958062"
+              onClick={[Function]}
+            >
+              <span
+                className="event-link-content"
+              >
+                <div
+                  className="event-name"
+                >
+                  Wolverhampton Wanderers vs. Fulham
+                </div>
+                <div
+                  className="event-info"
+                >
+                  In 3 day(s)
+                </div>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</aside>
+`;
