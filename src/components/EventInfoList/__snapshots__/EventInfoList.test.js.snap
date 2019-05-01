@@ -21,21 +21,34 @@ exports[`EventInfoList component should match the snapshot when rendered with pr
       <div
         className="category-container"
       >
-        <span
-          className="category-text"
+        <div
+          className="category-text-container"
         >
-          football
-        </span>
-        <span
-          className="separator"
+          <span
+            className="category-text"
+          >
+            football
+          </span>
+          <span
+            className="separator"
+          >
+            &gt;
+          </span>
+          <span
+            className="category-text"
+          >
+            Championship
+          </span>
+        </div>
+        <div
+          className="event-state"
         >
-          &gt;
-        </span>
-        <span
-          className="category-text"
-        >
-          Championship
-        </span>
+          <span
+            className="state-text"
+          >
+            upcoming
+          </span>
+        </div>
       </div>
       <div
         className="info-title"
@@ -88,21 +101,34 @@ exports[`EventInfoList component should match the snapshot when rendered with pr
       <div
         className="category-container"
       >
-        <span
-          className="category-text"
+        <div
+          className="category-text-container"
         >
-          football
-        </span>
-        <span
-          className="separator"
+          <span
+            className="category-text"
+          >
+            football
+          </span>
+          <span
+            className="separator"
+          >
+            &gt;
+          </span>
+          <span
+            className="category-text"
+          >
+            Championship
+          </span>
+        </div>
+        <div
+          className="event-state"
         >
-          &gt;
-        </span>
-        <span
-          className="category-text"
-        >
-          Championship
-        </span>
+          <span
+            className="state-text"
+          >
+            upcoming
+          </span>
+        </div>
       </div>
       <div
         className="info-title"
@@ -155,21 +181,34 @@ exports[`EventInfoList component should match the snapshot when rendered with pr
       <div
         className="category-container"
       >
-        <span
-          className="category-text"
+        <div
+          className="category-text-container"
         >
-          football
-        </span>
-        <span
-          className="separator"
+          <span
+            className="category-text"
+          >
+            football
+          </span>
+          <span
+            className="separator"
+          >
+            &gt;
+          </span>
+          <span
+            className="category-text"
+          >
+            Champions League
+          </span>
+        </div>
+        <div
+          className="event-state"
         >
-          &gt;
-        </span>
-        <span
-          className="category-text"
-        >
-          Champions League
-        </span>
+          <span
+            className="state-text"
+          >
+            upcoming
+          </span>
+        </div>
       </div>
       <div
         className="info-title"
@@ -222,21 +261,34 @@ exports[`EventInfoList component should match the snapshot when rendered with pr
       <div
         className="category-container"
       >
-        <span
-          className="category-text"
+        <div
+          className="category-text-container"
         >
-          football
-        </span>
-        <span
-          className="separator"
+          <span
+            className="category-text"
+          >
+            football
+          </span>
+          <span
+            className="separator"
+          >
+            &gt;
+          </span>
+          <span
+            className="category-text"
+          >
+            Champions League
+          </span>
+        </div>
+        <div
+          className="event-state"
         >
-          &gt;
-        </span>
-        <span
-          className="category-text"
-        >
-          Champions League
-        </span>
+          <span
+            className="state-text"
+          >
+            upcoming
+          </span>
+        </div>
       </div>
       <div
         className="info-title"
@@ -289,21 +341,34 @@ exports[`EventInfoList component should match the snapshot when rendered with pr
       <div
         className="category-container"
       >
-        <span
-          className="category-text"
+        <div
+          className="category-text-container"
         >
-          football
-        </span>
-        <span
-          className="separator"
+          <span
+            className="category-text"
+          >
+            football
+          </span>
+          <span
+            className="separator"
+          >
+            &gt;
+          </span>
+          <span
+            className="category-text"
+          >
+            Premier League
+          </span>
+        </div>
+        <div
+          className="event-state"
         >
-          &gt;
-        </span>
-        <span
-          className="category-text"
-        >
-          Premier League
-        </span>
+          <span
+            className="state-text"
+          >
+            upcoming
+          </span>
+        </div>
       </div>
       <div
         className="info-title"

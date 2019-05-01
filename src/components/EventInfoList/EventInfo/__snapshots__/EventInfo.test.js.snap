@@ -18,19 +18,23 @@ exports[`EventInfo component should match the snapshot when rendered with props 
     <div
       className="category-container"
     >
-      <span
-        className="category-text"
+      <div
+        className="category-text-container"
       >
-        Football
-      </span>
-      <span
-        className="separator"
-      >
-        &gt;
-      </span>
-      <span
-        className="category-text"
-      />
+        <span
+          className="category-text"
+        >
+          Football
+        </span>
+        <span
+          className="separator"
+        >
+          &gt;
+        </span>
+        <span
+          className="category-text"
+        />
+      </div>
     </div>
     <div
       className="info-title"
@@ -86,19 +90,23 @@ exports[`EventInfo component should should have the tall class if isTall is true
     <div
       className="category-container"
     >
-      <span
-        className="category-text"
+      <div
+        className="category-text-container"
       >
-        Football
-      </span>
-      <span
-        className="separator"
-      >
-        &gt;
-      </span>
-      <span
-        className="category-text"
-      />
+        <span
+          className="category-text"
+        >
+          Football
+        </span>
+        <span
+          className="separator"
+        >
+          &gt;
+        </span>
+        <span
+          className="category-text"
+        />
+      </div>
     </div>
     <div
       className="info-title"

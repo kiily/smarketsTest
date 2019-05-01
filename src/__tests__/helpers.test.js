@@ -18,7 +18,8 @@ describe('Helper functions - createMinimalEvents', () => {
       parent: { name: 'LaLiga' },
       start_datetime: new Date(),
       fakeProp: 'Hey',
-      anotherFakeProp: 'test'
+      anotherFakeProp: 'test',
+      state: 'upcoming'
     });
     console.log(minimalEvent);
     const defaultDateFormat = 'dd/MM/yyyy HH:mm';
@@ -32,7 +33,8 @@ describe('Helper functions - createMinimalEvents', () => {
       ],
       competition: 'LaLiga',
       startTime: today,
-      timeTo: 'In 0 hour(s)'
+      timeTo: 'In 0 hour(s)',
+      state: 'upcoming'
     });
   });
 

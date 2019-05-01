@@ -25,22 +25,33 @@ async function getEventFromId(id) {
   const eventRes = await axios.get(`/events/${id}/`);
   const event = eventRes.data.events[0];
   return event;
+}
 
+async function getEventState(id) {
+  const stateRes = await axios.get(`/events/${id}/states/`);
+  const state = stateRes.data.event_states[0];
+  return state;
 }
 
 async function getPopularEventData(sport) {
   const eventIds = await getPopularEventIds(sport);
   const popularEvents = await getEventsFromIds(eventIds);
-
   return Promise.all(popularEvents.map(async(event) => {
+    // TODO: this makes calls really slow - is there a faster way
+    const eventState = await getEventState(event.id);
+		console.log("TCL: getPopularEventData -> eventState", eventState)
+    event.state = eventState.state;
     event.parent = await getEventFromId(event.parent_id);
+		console.log("TCL: getPopularEventData -> event", event)
     return event;
   }));
 }
 
 const requestor = {
   getPopularEventData,
-  getHomeEvents
+  getHomeEvents,
+  getEventState,
+  getEventFromId
 };
 
 export default requestor;

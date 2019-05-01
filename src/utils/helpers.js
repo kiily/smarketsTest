@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 
 // eslint-disable-next-line camelcase
-export function createMinimalEvent({ id, type, name, parent, start_datetime }, dateFormat = 'dd/MM/yyyy HH:mm') {
+export function createMinimalEvent({ id, type, name, parent, start_datetime, state }, dateFormat = 'dd/MM/yyyy HH:mm') {
   const sport = type.split('_')[0];
   const parentCompetition = parent.name;
   const teams = name.split(' vs. ');
@@ -13,7 +13,8 @@ export function createMinimalEvent({ id, type, name, parent, start_datetime }, d
     competition: parentCompetition,
     teams,
     startTime: format(startTime, dateFormat),
-    timeTo
+    timeTo,
+    state
   };
   return minimalEvent;
 }
