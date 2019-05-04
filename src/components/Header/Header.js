@@ -21,4 +21,4 @@ header.propTypes = {
   toggleLinks: PropTypes.func
 };
 
-export default header;
+export default React.memo(header);

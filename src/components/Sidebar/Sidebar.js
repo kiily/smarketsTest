@@ -66,4 +66,4 @@ sidebar.propTypes = {
   show: PropTypes.bool
 };
 
-export default sidebar;
+export default React.memo(sidebar);
